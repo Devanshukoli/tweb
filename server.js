@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 const server = useHttp ? http : https;
 
 let options = {};
-if(!useHttp) {
+if (!useHttp) {
   options.key = fs.readFileSync(__dirname + '/certs/server-key.pem');
   options.cert = fs.readFileSync(__dirname + '/certs/server-cert.pem');
 }
